@@ -115,4 +115,4 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm test
-    - run: pm2 restart backendserver
+    - run: pm2 start src/index.js --name=backendserver
