@@ -21,11 +21,11 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-app.use("/projects/duckindia/api/categories", categoryRoutes);
-app.use("/projects/duckindia/api/products", productRoutes);
-app.use("/projects/duckindia/api/banners", bannerRoutes);
-app.use("/projects/duckindia/api/cart", cartRoutes);
-app.use("/projects/duckindia/api/inquiries", inquiryRoutes);
+app.use("/api/categories", categoryRoutes);
+app.use("/api/products", productRoutes);
+app.use("/api/banners", bannerRoutes);
+app.use("/api/cart", cartRoutes);
+app.use("/api/inquiries", inquiryRoutes);
 const morgan = require('morgan');
 
 app.use(morgan('dev')); 
