@@ -13,10 +13,11 @@ connectDB();
 app.use(bodyParser.json());
 
 const corsOptions = {
-  origin: ['http://localhost:5400/','http://localhost:62389'],
+ // origin: ['http://localhost:5400/','http://localhost:62389'],
   // methods: ['GET', 'POST', 'PUT', 'DELETE'],
   // allowedHeaders: ['Content-Type', 'Authorization'],
   // credentials: true, 
+  origin: "*",
 };
 
 app.use(cors(corsOptions));
