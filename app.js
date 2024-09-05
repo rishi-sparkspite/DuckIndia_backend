@@ -26,11 +26,12 @@ app.use("/api/products", productRoutes);
 app.use("/api/banners", bannerRoutes);
 app.use("/api/cart", cartRoutes);
 app.use("/api/inquiries", inquiryRoutes);
+app.use("/api/media", mediaRoutes);
 const morgan = require('morgan');
 
 app.use(morgan('dev')); 
 
-const PORT = process.env.PORT || 3040;
+const PORT = process.env.PORT || 8081;
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
