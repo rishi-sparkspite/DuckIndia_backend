@@ -2,6 +2,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const connectDB = require("./config/db");
+const mediaRoutes = require("./routes/mediaRoutes"); 
 const categoryRoutes = require("./routes/categoryRoutes");
 const productRoutes = require("./routes/productRoutes");
 const bannerRoutes = require("./routes/bannerRoutes");

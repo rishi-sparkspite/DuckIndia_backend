@@ -1,5 +1,5 @@
 const express = require("express");
-const { multer, uploadImageToStorage } = require("./mediaController");
+const { multer, uploadImageToStorage } = require("../controllers/mediaController");
 
 const router = express.Router();
 
