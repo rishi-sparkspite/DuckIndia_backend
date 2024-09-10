@@ -2,7 +2,7 @@ const { Storage } = require("@google-cloud/storage");
 const Multer = require("multer");
 
 const storage = new Storage();
-const bucket = storage.bucket("gs://duckindia-a177a.appspot.com");
+const bucket = storage.bucket("gs://duck-india.appspot.com");
 
 const multer = Multer({
   storage: Multer.memoryStorage(),
