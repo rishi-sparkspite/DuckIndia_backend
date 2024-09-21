@@ -13,6 +13,13 @@ const cors = require('cors');
 connectDB();
 app.use(bodyParser.json());
 
+const admin = require("firebase-admin");
+
+admin.initializeApp({
+  credential: admin.credential.cert(require('./path/to/firebase-service-account.json')),
+  storageBucket: process.env.STORAGE_BUCKET // Ensure this is set in your .env file
+});
+
 const corsOptions = {
  // origin: ['http://localhost:5400/','http://localhost:62389'],
   // methods: ['GET', 'POST', 'PUT', 'DELETE'],
