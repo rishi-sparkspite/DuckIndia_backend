@@ -2,22 +2,36 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const connectDB = require("./config/db");
-const mediaRoutes = require("./routes/mediaRoutes"); 
+const mediaRoutes = require("./routes/mediaRoutes");
 const categoryRoutes = require("./routes/categoryRoutes");
 const productRoutes = require("./routes/productRoutes");
 const bannerRoutes = require("./routes/bannerRoutes");
 const cartRoutes = require("./routes/cartRoutes");
 const app = express();
 const inquiryRoutes = require("./routes/inquiryRoutes");
-const cors = require('cors');
+const { initializeFirebaseAdmin } = require("./config/firebase");
+const cors = require("cors");
+initializeFirebaseAdmin();
 connectDB();
 app.use(bodyParser.json());
 
+<<<<<<< Updated upstream
+=======
+const admin = require("firebase-admin");
+
+// admin.initializeApp({
+//   credential: admin.credential.cert(
+//     require("./path/to/firebase-service-account.json")
+//   ),
+//   storageBucket: process.env.STORAGE_BUCKET, // Ensure this is set in your .env file
+// });
+
+>>>>>>> Stashed changes
 const corsOptions = {
- // origin: ['http://localhost:5400/','http://localhost:62389'],
+  // origin: ['http://localhost:5400/','http://localhost:62389'],
   // methods: ['GET', 'POST', 'PUT', 'DELETE'],
   // allowedHeaders: ['Content-Type', 'Authorization'],
-  // credentials: true, 
+  // credentials: true,
   origin: "*",
 };
 
@@ -28,9 +42,9 @@ app.use("/api/banners", bannerRoutes);
 app.use("/api/cart", cartRoutes);
 app.use("/api/inquiries", inquiryRoutes);
 app.use("/api/media", mediaRoutes);
-const morgan = require('morgan');
+const morgan = require("morgan");
 
-app.use(morgan('dev')); 
+app.use(morgan("dev"));
 
 const PORT = process.env.PORT || 8081;
 

@@ -15,8 +15,15 @@
     "@google-cloud/storage": "^7.12.1",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
+    "crypto": "^1.0.1",
     "dotenv": "^16.4.5",
+<<<<<<< Updated upstream
     "express": "^4.19.2",
+=======
+    "duckindia-ecommerce": "file:",
+    "express": "^4.21.0",
+    "firebase-admin": "^12.5.0",
+>>>>>>> Stashed changes
     "jest": "^29.7.0",
     "mongodb": "^6.8.0",
     "mongoose": "^8.5.1",
