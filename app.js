@@ -15,8 +15,6 @@ initializeFirebaseAdmin();
 connectDB();
 app.use(bodyParser.json());
 
-<<<<<<< Updated upstream
-=======
 const admin = require("firebase-admin");
 
 // admin.initializeApp({
@@ -26,7 +24,6 @@ const admin = require("firebase-admin");
 //   storageBucket: process.env.STORAGE_BUCKET, // Ensure this is set in your .env file
 // });
 
->>>>>>> Stashed changes
 const corsOptions = {
   // origin: ['http://localhost:5400/','http://localhost:62389'],
   // methods: ['GET', 'POST', 'PUT', 'DELETE'],

@@ -6,7 +6,7 @@ const {
 } = require("../controllers/inquiryController");
 const router = express.Router();
 
-router.post("/", createInquiry);
+router.post("/create", createInquiry);
 
 router.get("/", getInquiries);
 
