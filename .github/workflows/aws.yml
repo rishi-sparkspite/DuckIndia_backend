@@ -97,7 +97,7 @@ name: Node.js CI/CD
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "prod" ]
 
 jobs:
   build:
