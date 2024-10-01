@@ -1,3 +1,4 @@
+//Inquiry.js
 const mongoose = require('mongoose');
 
 const InquirySchema = new mongoose.Schema({
