@@ -98,7 +98,7 @@ const fetch = async (name) => {
   const file = bucket.file(media.path);
   const [url] = await file.getSignedUrl({
     action: "read",
-    expires: helpers.expiry, // Set expiry date for the URL
+    expires: helpers.expiry, 
   });
 
   return { success: true, response: url };
