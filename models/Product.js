@@ -1,4 +1,3 @@
-// models/Product.js
 const mongoose = require('mongoose');
 
 const VariantSchema = new mongoose.Schema({
@@ -22,6 +21,7 @@ const ProductSchema = new mongoose.Schema({
   images: [String],
 });
 
+// Pre-save hook to set retailPrice based on wholesalePrice
 ProductSchema.pre('save', function (next) {
   this.variants.forEach(variant => {
     variant.retailPrice = variant.wholesalePrice * 2.5;
