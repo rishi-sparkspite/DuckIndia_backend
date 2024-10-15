@@ -16,8 +16,6 @@ exports.getProductsByCategory = async (req, res) => {
   try {
     const { categoryId } = req.params;
     const products = await Product.find({ category: categoryId }).populate("category");
-
-    // Format the response to include category details
     const formattedProducts = products.map(product => ({
       id: product._id,
       name: product.name,
@@ -34,7 +32,7 @@ exports.getProductsByCategory = async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 };
-
+//check
 exports.getProductById = async (req, res) => {
   try {
     const { productId } = req.params;
@@ -70,7 +68,6 @@ exports.updateProduct = async (req, res) => {
       return res.status(404).json({ message: "Product not found" });
     }
 
-    // Format the response to include category details
     const formattedProduct = {
       id: product._id,
       name: product.name,
